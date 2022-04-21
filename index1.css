@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-origin: padding-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 1rem;
+    /* //background-color: #636363; */
+}
+/* .nav-item
+{
+    font-size: 1.5rem;
+    color: white;
+}
+.navbar-brand
+{
+    font-size: 2rem;
+    padding-bottom: 0.8125rem;
+    align-items: center;
+}
+.form-control {
+    padding: 0.375rem 1.25rem;
+    font-size: 1.5rem;
+} */
+.btn-1
+{
+    /* padding: 0.375rem 2rem;
+    font-size: 1.2rem; */
+    color: white;
+    border: 1px solid white;
+}
+.btn-1:hover
+{
+    background-color: #fff;
+    color: black;
+    border: 1px solid rgb(8, 8, 8);
+}
+#sect-1{
+    display: block;
+    /* justify-content: flex-end; */
+}
+#sect-1::before
+{
+    content: "";
+    position: absolute;
+    background: url("bg.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    top: 0rem;
+    left: 0rem;
+    opacity: 1;
+    z-index: -1;
+}
+.calculator {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    max-width: 34rem;
+    max-height: 28rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    margin: 3.4rem 3rem;
+    padding: 1rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.output {
+    max-width: 32rem;
+    max-height: 8rem;
+    background-color: black;
+    border: 2px solid black;
+    margin: 0rem;
+}
+.operation
+{
+    max-width: 31rem;
+    max-height: 4rem;
+    margin-left: 1rem;
+    text-align: right;
+}
+.result {
+    width: 31rem;
+    height: 4rem;
+    margin-left: 1rem;
+    text-align: right;
+}
+.value
+{
+    color: white;
+    font-size: 1.8rem;
+    padding-right: 0.5rem;
+}
+.result .value
+{
+    color: rgb(131 125 125);
+    font-size: 1.8rem;
+    padding-right: 0.5rem;
+}
+.input1{
+    width: 32rem;
+    height: 18rem;
+    background-color: white;
+    margin: 0rem;
+    border: 3px solid black;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.row1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-2 {
+    width: 4rem;
+    height: 3.4rem;
+    border: 2px solid white;
+    background-color: rgb(253, 253, 253);
+    font-size: 1.5rem;
+    border-radius: 0.9rem;
+}
+.btn-2:hover{
+    font-weight: bold;
+}
+.btn-3{
+    width: 2.5rem;
+}
+
+button#calculate{
+    width: 5rem;
+    height: 3.923rem;
+    border: 2px solid white;
+    /* border-radius: 0.9rem; */
+    background-color: rgb(165, 243, 191);
+    margin:0rem;
+}
+button#delete {
+    background-color: red;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    padding: 0.28rem;
+}
+.navbar-toggler-icon {
+    width: 2.5em;
+    height: 2.5em;
+} */
+.active-angle{
+    background-color: black;
+    color: white;
+}
+sup{
+    position: relative;
+    bottom: 0.4em;
+    font-size: 70%;
+    vertical-align: baseline;
+}
+.bur-element {
+    float: left;
+    max-width: 32rem;
+    max-height: 33.5rem;
+    /* margin: 0.09rem 30rem 0rem 0rem;
+    margin-right: 28%; */
+    background-color: rgb(70, 69, 69);
+    position: absolute;
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    width: 2.8rem;
+    height: 2.1rem;
+    margin: 0.2rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(19, 18, 18);
+    border-radius: 0.2rem;
+    justify-content: center;
+    align-items: center;
+}
+.burger:hover{
+    border: 4px solid rgb(109, 106, 106);
+}
+.line {
+    width: 1.8rem;
+    height: 0.18rem;
+    background-color: white;
+    margin: 0.12rem;
+}
+.bur-1 {
+    width: 3.4rem;
+    height: 2.6rem;
+    /* margin: 0.2rem 41.7rem 0.2rem 0.2rem;
+    margin-right: 45%; */
+    border: 2px solid rgb(56, 55, 55);
+    border-radius: 0.2rem;
+}
+.blist-1{
+    display: none;
+}
+/* .footer{
+    display:  flex;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    margin: 0rem;
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+} */
+/* .operation .value{
+    position: absolute;
+    bottom: 5px;
+    right : 10px;
+    white-space: nowrap;
+    overflow: hidden;
+} */
+footer{
+    float: none;
+}
+.container {
+    background-color: #3c3a3a;
+    max-width: 100%;
+    margin: 0rem;
+}
