@@ -135,9 +135,11 @@ function knapnonfrac(q, n) {
 function calculate(q, n) {
     var str = "";
     var str1 = "";
+    pw = [];
     for (var i = 0; i < n; i++) {
         pw.push(p[i] / w[i]);
     }
+    w1 = [];
     for (let i = 0; i < n; i++)
         w1.push(w[i]);
     sortList(pw, w);
@@ -260,7 +262,7 @@ btn.addEventListener('click', () => {
         result.classList.toggle('resultnone');
         result1.classList.toggle('resultnone');
     }
-    if (n > 0) {
+    if (n > 0 && q >= 0) {
         table(n);
         if (cal.classList.contains('btn-hidd'))
             cal.classList.toggle('btn-hidd');
