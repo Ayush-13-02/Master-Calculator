@@ -124,7 +124,7 @@ function knapnonfrac(q, n) {
         }
         str011 += `<tr>${strc011}</tr>`;
     }
-    result1.innerHTML = `<div class="heading"><h2>0-1 KnapSack Table</h2></div><table class="tab-result1 table table-bordered border-primary">
+    result1.innerHTML = `<table class="tab-result1 table table-bordered border-primary">
     <thead>
       <tr>
         ${str01}
