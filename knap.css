@@ -71,6 +71,7 @@ button.btn_table {
 
 .res {
     display: flex;
+    min-width: 45rem;
 }
 
 /* .knapresult1{
@@ -106,6 +107,10 @@ table.tab-result {
     justify-content: center;
     margin-top: 2%;
 }
+
 .doc {
     margin-left: 5%;
+}
+div#result-kn {
+    padding: 0rem 1rem;
 }

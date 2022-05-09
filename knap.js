@@ -2,6 +2,8 @@ const cal = document.querySelector('.knap-cal');
 const btn = document.querySelector('.btn_table');
 const knap_table = document.querySelector('.knap_table');
 const result = document.querySelector('.knapresult');
+const heading = document.querySelector('.head');
+const heading1 = document.querySelector('.head1');
 const result2 = document.querySelector('.res');
 const result1 = document.querySelector('.knapresult1');
 const up = document.querySelector('.upper');
@@ -207,6 +209,8 @@ function calculate(q, n) {
     }
     result.classList.toggle('resultnone');
     result1.classList.toggle('resultnone');
+    heading1.classList.toggle('resultnone');
+    heading.classList.toggle('resultnone');
     result2.innerHTML = `<table class="tab-result table table-bordered border-primary">
     <thead>
       <tr>
@@ -261,6 +265,8 @@ btn.addEventListener('click', () => {
     if (!result.classList.contains('resultnone')) {
         result.classList.toggle('resultnone');
         result1.classList.toggle('resultnone');
+        heading1.classList.toggle('resultnone');
+        heading.classList.toggle('resultnone');
     }
     if (n > 0 && q >= 0) {
         table(n);
@@ -279,6 +285,8 @@ cal.addEventListener('click', () => {
     if (!result.classList.contains('resultnone')) {
         result.classList.toggle('resultnone');
         result1.classList.toggle('resultnone');
+        heading1.classList.toggle('resultnone');
+        heading.classList.toggle('resultnone');
     }
     take_input(q, n);
     document.getElementById('result-kn').scrollIntoView();
