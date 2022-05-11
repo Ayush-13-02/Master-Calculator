@@ -19,9 +19,9 @@
         font-size: 1rem;
     }
     .result {
-        width: 19rem;
-        height: 3rem;
-        margin-left: 0rem;
+        max-width: 19rem;
+        min-height: 3rem;
+        margin-left: 1rem;
         font-size: 1rem;
     }
     .input1{
