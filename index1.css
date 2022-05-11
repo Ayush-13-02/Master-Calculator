@@ -7,13 +7,11 @@
 .operation::-webkit-scrollbar-thumb{
     background-color: #8f8b8b;
     -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 1rem;
+    border-radius: 0.6rem;
 }
 .operation::-webkit-scrollbar{
     background-color: black;
     height: 1vh;
-    display: block;
-    float: right;
 }
 
 html{
@@ -76,7 +74,8 @@ html{
     max-height: 4rem;
     margin-left: 1rem;
     text-align: right;
-    overflow-x: scroll;
+    overflow: hidden;
+    overflow-x: auto;
 }
 .result {
     max-width: 31rem;
