@@ -306,6 +306,7 @@ function inv_trigo(mycallback, num) {
     }
     return value;
 }
+
 function trigo(mycallback, num) {
     if (!RADIAN) {
         num *= (Math.PI / 180);
@@ -313,6 +314,7 @@ function trigo(mycallback, num) {
     let value = mycallback(num);
     return round1(value);
 }
+
 function search(array, keyword) {
     let search_index = [];
     array.forEach((element, index) => {
@@ -330,7 +332,9 @@ function powerBaseGetter(formula, index) {
         let base = [];
         let parenthesis_cnt = 0;
         let previous_index = power_index - 1;
-        while (previous_index >= 0) {
+        while (previous_index >= 0 && parenthesis_cnt>=0) {
+            if(typeof(formula[previous_index])!='number')
+             break;
             if (formula[previous_index] == '(') parenthesis_cnt--;
             if (formula[previous_index] == ')') parenthesis_cnt++;
             let is_operator = false;
@@ -353,6 +357,8 @@ function rootBaseGetter(formula, index) {
         let parenthesis_cnt = 0;
         let previous_index = power_index - 1;
         while (previous_index >= 0) {
+            if(typeof(formula[previous_index])!='number')
+             break;
             if (formula[previous_index] == '(') parenthesis_cnt--;
             if (formula[previous_index] == ')') parenthesis_cnt++;
             let is_operator = false;
@@ -381,6 +387,8 @@ function factorialnumGetter(formula, index) {
         let parenthesis_cnt = 0;
         let previous_index = fact_index - 1;
         while (previous_index >= 0) {
+            if(typeof(formula[previous_index])!='number')
+             break;
             if (formula[previous_index] == '(') parenthesis_cnt--;
             if (formula[previous_index] == ')') parenthesis_cnt++;
             let is_operator = false;
@@ -491,6 +499,7 @@ function calculator(button) {
                 data.operation.push("</sub>");
             }
             data.formula.pop();
+            console.log(data.formula);
         }
         else if (button.name == "rad") {
             if (RADIAN == false)
@@ -546,8 +555,8 @@ function calculator(button) {
             let result2 = data.operation.join('');
             let toreplace = Base + ROOT;
             let replacement = "Root(" + Base + ",";
-            let toreplace1 = Base;
-            let replacement1 = "<sup>" + Base + "</sup>";
+            let toreplace1 = Base + "√(";
+            let replacement1 = "<sup>" + Base + "</sup>" + "√(";
             result1 = result1.replace(toreplace, replacement);
             result2 = result2.replace(toreplace1, replacement1);
             data.formula = [result1];
@@ -558,7 +567,6 @@ function calculator(button) {
         try {
 
             result += eval(result1);
-            console.log(check(result[0]), result);
             if (result != "undefined") {
                 if (!check(result[0]))
                     output_result_element.innerHTML = result;
@@ -566,7 +574,6 @@ function calculator(button) {
             else
                 output_result_element.innerHTML = '';
         } catch (error) {
-            console.log("hi");
             result = "";
             result += eval(data.formula.join('').slice(0, -1));
             if (typeof(result) != "undefined") {
@@ -578,6 +585,7 @@ function calculator(button) {
         }
     }
 }
+
 input_element.addEventListener('click', event => {
     const target_btn = event.target;
     calculator_buttons.forEach(button => {
